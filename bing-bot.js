@@ -23,7 +23,7 @@ if (window.location.toString().includes("search")) {
     if (links[i].href.indexOf("napli.ru") !== -1) {
       let link = links[i];
       link.click();
-      alert("Нашел строку: " + links[i]);
+    //  alert("Нашел строку: " + links[i]);
       break;
     }
   }
