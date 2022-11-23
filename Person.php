@@ -16,7 +16,6 @@ class Person
     $this->age = $age;
     $this->mother = $mother;
     $this->father = $father;
-    $this->father = $father;
     $this->hp = 100;
   }
 
@@ -71,3 +70,4 @@ $olga = new Person("Olga", "Ivanova", 42, $tatyana, $igor);
 $valera = new Person("Valera", "Ivanov", 15, $olga, $alex);
 
 echo $valera->getInfo();
+
