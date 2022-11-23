@@ -66,7 +66,7 @@ $pavel = new Person("Pavel", "Ivanov", 78);
 $oksana = new Person("Oksana", "Pavlova", 78);
 
 
-$alex = new Person("Alex", "Ivanov", 42, $pavel, $oksana);
+$alex = new Person("Alex", "Ivanov", 42, $oksana, $pavel );
 $olga = new Person("Olga", "Ivanova", 42, $tatyana, $igor);
 $valera = new Person("Valera", "Ivanov", 15, $olga, $alex);
 
