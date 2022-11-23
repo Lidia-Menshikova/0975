@@ -49,10 +49,10 @@ class Person
     return "
     <h2>A few words about myself.</h2><br>" . "My name is: " . $this->getName() . "<br>my father is: " . $this->getFather()->getName()
     . "<br>my mother is: " . $this->getMother()->getName() 
-    . "<br>my grandfather (pap`s father) is: " . $this->getFather()->getFather()
-    . "<br>my grandmother (pap`s mother) is: " . $this->getFather()->getMother()
+    . "<br>my grandfather (pap`s father) is: " . $this->getFather()->getFather()->getName() 
+    . "<br>my grandmother (pap`s mother) is: " . $this->getFather()->getMother()->getName() 
     . "<br>my grandfather (mom`s father) is: " . $this->getMother()->getFather()->getName() 
-    . "<br>my grandmother (mom`s mother) is: " . $this->getMother()->getMother()
+    . "<br>my grandmother (mom`s mother) is: " . $this->getMother()->getMother()->getName() 
     ;
     //* Необходимо дописать метод и вызвать для вывода на экран всей родни
   }
@@ -60,9 +60,14 @@ class Person
 //! Здоровье человека не может быть более 100
 
 $igor = new Person("Igor", "Petrov", 78);
+$tatyana = new Person("Tatyana", "Petrova", 78);
 
-$alex = new Person("Alex", "Ivanov", 42, 'Unknown', 'Unknown');
-$olga = new Person("Olga", "Ivanova", 42, 'Unknown', $igor);
+$pavel = new Person("Pavel", "Ivanov", 78);
+$oksana = new Person("Oksana", "Pavlova", 78);
+
+
+$alex = new Person("Alex", "Ivanov", 42, $pavel, $oksana);
+$olga = new Person("Olga", "Ivanova", 42, $tatyana, $igor);
 $valera = new Person("Valera", "Ivanov", 15, $olga, $alex);
 
 echo $valera->getInfo();
