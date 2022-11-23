@@ -49,10 +49,10 @@ class Person
     return "
     <h2>A few words about myself.</h2><br>" . "My name is: " . $this->getName() . "<br>my father is: " . $this->getFather()->getName()
     . "<br>my mother is: " . $this->getMother()->getName() 
-    . "<br>my grandfather (pap`s father) is: " . $this->getFather()->getFather()->getName() 
-    . "<br>my grandmother (pap`s mother) is: " . $this->getFather()->getMother()->getName() 
-    . "<br>my grandfather (mom`s father) is: " . $this->getMother()->getFather()->getName() 
-    . "<br>my grandmother (mom`s mother) is: " . $this->getMother()->getMother()->getName() 
+    . "<br>my grandfather is: " . $this->getFather()->getFather()->getName() 
+    . "<br>my grandmother is: " . $this->getFather()->getMother()->getName() 
+    . "<br>my grandfather is: " . $this->getMother()->getFather()->getName() 
+    . "<br>my grandmother is: " . $this->getMother()->getMother()->getName() 
     ;
     //* Необходимо дописать метод и вызвать для вывода на экран всей родни
   }
